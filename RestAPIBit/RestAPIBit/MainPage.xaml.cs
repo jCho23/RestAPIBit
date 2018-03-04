@@ -12,6 +12,8 @@ namespace RestAPIBit
 		public MainPage()
 		{
 			InitializeComponent();
+
+
 		}
 	}
 }
