@@ -26,7 +26,7 @@ namespace RestAPIBit
 
             var response = await client.GetStringAsync("http://lionapp.azurewebsites.net/api/PostTexts");
 
-            var postMessages= JsonConvert.DeserializeObject<List<PostMessage>>(response);
+            var postMessages= JsonConvert.DeserializeObject<List<PostMessages>>(response);
             PostMessageListView.ItemsSource = postMessages;
         }
 	}

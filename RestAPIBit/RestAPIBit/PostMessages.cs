@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RestAPIBit
 {
-    class PostMessage
+    class PostMessages
     {
         public int Id { get; set; }
         public string PostMessage { get; set; }
