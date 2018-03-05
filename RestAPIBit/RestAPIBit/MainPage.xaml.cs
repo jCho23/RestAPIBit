@@ -13,7 +13,16 @@ namespace RestAPIBit
 		{
 			InitializeComponent();
 
+            GetPostMessages();
+
 
 		}
+
+        private async void GetPostMessages()
+        {
+            HttpClient client = new HttpClient();
+
+            await client.GetStringAsync("http://lionapp.azurewebsites.net/api/PostTexts");
+        }
 	}
 }
