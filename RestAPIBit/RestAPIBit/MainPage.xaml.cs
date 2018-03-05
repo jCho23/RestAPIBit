@@ -22,7 +22,10 @@ namespace RestAPIBit
         {
             HttpClient client = new HttpClient();
 
-            await client.GetStringAsync("http://lionapp.azurewebsites.net/api/PostTexts");
+            var response = await client.GetStringAsync("http://lionapp.azurewebsites.net/api/PostTexts");
+
+            var postMessages= JsonConvert.DeserializeObject<List<PostMessage>>(response);
+            PostMessageListView.ItemSource = postMessages;
         }
 	}
 }
