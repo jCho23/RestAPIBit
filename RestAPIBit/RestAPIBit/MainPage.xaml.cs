@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -25,7 +27,7 @@ namespace RestAPIBit
             var response = await client.GetStringAsync("http://lionapp.azurewebsites.net/api/PostTexts");
 
             var postMessages= JsonConvert.DeserializeObject<List<PostMessage>>(response);
-            PostMessageListView.ItemSource = postMessages;
+            PostMessageListView.ItemsSource = postMessages;
         }
 	}
 }

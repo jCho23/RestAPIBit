@@ -4,12 +4,9 @@ using System.Text;
 
 namespace RestAPIBit
 {
-    class Products
+    class PostMessage
     {
         public int Id { get; set; }
-
-        public string ProductName { get; set; }
-
-        public double Price { get; set; }
+        public string PostMessage { get; set; }
     }
 }
